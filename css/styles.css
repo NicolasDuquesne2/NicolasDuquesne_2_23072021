@@ -145,10 +145,26 @@ body{
     background-color: var(--light-grey);
 }
 
+.mosaic-header {
+    display: flex;
+}
+
+.fa-chart-line {
+    display: flex;
+}
+
+.mosaic-title {
+    font-size: 1.4em;
+    margin-bottom: 19px;
+    margin-top: 0;
+}
+
 .in-line-mosaic {
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+}
+
+.in-col-mosaic {
+    display: flex;
 }
 
 #loc-lodgings {
@@ -161,25 +177,10 @@ body{
 
 .in-line-card {
     display: flex;
-    flex-direction: column;
-    width: 235px;
-    height: 190px;
-    border-style: solid;
-    border-width: 5px;
-    border-radius: 16px;
-    border-color: var(--auto-color);
-    font-size: 0.5em;
-    margin: 15px;
-    margin-left: 0;
 }
 
 .in-col-card {
     display: flex;
-    flex-direction: row;
-    width: 343px;
-    border-style: solid;
-    border-width: 2px;
-    border-color: var(--auto-color);
 }
 
 @media screen and (min-width: 900px){
@@ -281,6 +282,7 @@ body{
         flex-direction: row;
         height: 50px;
         margin-bottom: 40px;
+        margin-left: 3px;
     }
 
     .filter-title {
@@ -340,9 +342,72 @@ body{
 
     .mosaics-frame {
         flex-direction: row;
+        margin-top: 36px;
     }
 
+    .mosaic-frame {
+       padding-top: 46px;
+       padding-bottom: 50px;
+       padding-left: 40px;
+       padding-right: 40px;
+    }
 
+    .mosaic-header {
+        flex-direction: row;
+        justify-content:space-between;
+        height: 50px;
+    }
+
+    .fa-chart-line {
+        width: 22px;
+        height: 19px;
+        font-size: 22px;
+    }
+
+    .in-line-mosaic {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .in-col-mosaic {
+       flex-direction: column;
+       justify-content: space-between;
+       flex: auto;
+    }
+
+    .in-line-card {
+        flex-direction: column;
+        width: 235px;
+        height: 190px;
+        border-style: solid;
+        border-width: 5px;
+        border-radius: 16px;
+        border-color: var(--auto-color);
+        font-size: 0.5em;
+        margin-bottom: 40px;
+    }
+
+    .black-link {
+        text-decoration: none;
+        color: var(--auto-color);
+        font-size: 1em;
+        font-weight: 800;
+    }
+
+    .in-col-card {
+        flex-direction: row;
+        width: 343px;
+        border-style: solid;
+        border-width: 5px;
+        border-color: var(--auto-color);
+        border-radius: 16px;
+    }
+
+    #loc-lodgings {
+        flex: auto;
+        margin-right: 40px;
+    }
 
 }
 
