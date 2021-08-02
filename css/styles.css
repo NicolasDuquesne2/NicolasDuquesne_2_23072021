@@ -18,6 +18,7 @@
 
 body{
     font-family: 'Raleway','Courier New', Courier, monospace;
+    margin: 0;
 }
 
 .bold {
@@ -108,7 +109,6 @@ body{
 .button-frame {
     display: flex;
     flex-direction: row;
-    flex-direction: row;
     align-items: center;
 }
 
@@ -135,7 +135,7 @@ body{
     margin: 0;
 }
 
-.mosaics-frame {
+.in-line-mosaics-frame {
     display: flex;
 }
 
@@ -163,6 +163,10 @@ body{
     display: flex;
 }
 
+.in-line-mosaic-width {
+    display: flex;
+}
+
 .in-col-mosaic {
     display: flex;
 }
@@ -183,15 +187,68 @@ body{
     display: flex;
 }
 
+.stars-container {
+    display: flex;
+}
+
+.in-line-mosaics-frame-no-margin {
+    display: flex;
+}
+
+.high-card {
+    display: flex;
+    width: 315px;
+    height: 460px;
+}
+
+.med-card {
+    display: flex;
+    width: 315px;
+    height: 250px;
+}
+
+.low-card {
+    display: flex;
+    width: 315px;
+    height: 208px;
+}
+
+.main-footer {
+    display: flex;
+}
+
+.main-footer-frame {
+    display: flex;
+}
+
+.main-footer-col {
+    flex: 1;
+}
+
+.main-footer-ul {
+    padding: 0;
+}
+
+.main-footer-li {
+    list-style-type: none;
+}
+
+.foot-col-title {
+    color: var(--auto-color);
+}
+
 @media screen and (min-width: 900px){
      
-    body {
-        margin: 0px 50px 0px 50px;
-    }
     
     .body-header{
         flex-direction: row;
+        margin: 0px 50px 0px 50px
     }
+
+    main {
+        margin: 0px 50px 0px 50px
+    }
+
 
     .body-header-ul {
         flex-direction: row;
@@ -309,6 +366,7 @@ body{
         height: 50px;
         border-radius: 50%;
         background-color: var(--light-blue);
+        color: var(--main-blue);
         justify-content: center;
         align-items: center;
         margin-right: -46px;
@@ -340,9 +398,10 @@ body{
         font-size: 1em;
     }
 
-    .mosaics-frame {
+    .in-line-mosaics-frame {
         flex-direction: row;
         margin-top: 36px;
+        margin-bottom: 20px;
     }
 
     .mosaic-frame {
@@ -370,6 +429,11 @@ body{
         justify-content: space-between;
     }
 
+    .in-line-mosaic-width {
+        width: 655px;
+        flex-direction: row;
+    }
+
     .in-col-mosaic {
        flex-direction: column;
        justify-content: space-between;
@@ -382,8 +446,9 @@ body{
         height: 190px;
         border-style: solid;
         border-width: 5px;
-        border-radius: 16px;
-        border-color: var(--auto-color);
+        border-radius: 30px;
+        border-color: var(--white);
+        background-color: var(--light-blue);
         font-size: 0.5em;
         margin-bottom: 40px;
     }
@@ -407,6 +472,86 @@ body{
     #loc-lodgings {
         flex: auto;
         margin-right: 40px;
+    }
+
+    .in-line-pic {
+        width: 200px;
+        height: 113px;
+    }
+
+    .in-line-mosaics-frame-no-margin {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .in-col-mosaics-frame {
+        flex-direction: column;
+    }
+
+    .high-card {
+        flex-direction: column;
+        width: 300px;
+        height: 460px;
+        border-style: solid;
+        border-width: 5px;
+        border-color: var(--auto-color);
+        border-radius: 16px;
+        margin-right: 31px;
+    }
+
+    .med-card {
+        flex-direction: column;
+        width: 300px;
+        height: 244px;
+        border-style: solid;
+        border-width: 5px;
+        border-color: var(--auto-color);
+        border-radius: 16px;
+    }
+
+    .low-card {
+        flex-direction: column;
+        width: 300px;
+        height: 173px;
+        border-style: solid;
+        border-width: 5px;
+        border-color: var(--auto-color);
+        border-radius: 16px;
+    }
+
+    .main-footer {
+        background-color: var(--light-grey);
+        flex-direction: column;
+    }
+
+    .main-footer-frame {
+        flex-direction: row;
+        margin: 0px 50px 0px 50px;
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+
+    .main-footer-col {
+        flex: 1;
+    }
+
+    .body-footer-ul {
+        padding: 0;
+        margin: 25px 0px 0px 0px;
+    }
+
+    .main-footer-li {
+        list-style-type: none;
+    }
+
+    .foot-col-title {
+        font-size: 1em;
+        margin: 0;
+    }
+
+    .regular-text-foot {
+        margin-top: 16px;
+        font-size: 0.9em;
     }
 
 }
