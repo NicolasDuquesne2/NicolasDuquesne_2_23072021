@@ -134,8 +134,8 @@ body{
     align-items: center;
     justify-content: center;
     background-color: var(--light-grey);
-    border-top-left-radius: 14px;
-    border-bottom-left-radius: 14px;
+    border-top-left-radius: 25%;
+    border-bottom-left-radius: 25%;
     width: 51px;
     align-items: center;
 }
@@ -206,6 +206,7 @@ body{
 .form-filter-button {
     border-radius: 30px;
     border-style: solid;
+    border-color: var(--reg-grey);
     background-color: var(--white);
     margin-right: 0px;
     padding: 0;
@@ -684,6 +685,11 @@ body{
         margin-right: 31px;
     }
 
+    .margin-bottom {
+        margin-bottom: 0;
+    }
+    
+
     .order-1 {
         order: 1;
     }
@@ -780,12 +786,20 @@ body{
     .in-line-mosaics-frame {
         flex-direction: row;
         margin-top: 36px;
-        margin-bottom: 20px;
+        margin-bottom: 60px;
+        height: 624px;
     }
 
     .in-col-mosaics-frame {
         align-items: flex-start;
     }
+
+    .mosaic-frame {
+        display: flex;
+        flex-direction: column;
+        height: 542px;
+    }
+
 
     .mosaic-header {
         flex-direction: row;
@@ -805,6 +819,7 @@ body{
         display: flex;
         align-items: unset;
         margin-right: 40px;
+        margin-bottom: unset;
         padding: 42px 38px;
         flex: auto;
     }
@@ -815,6 +830,12 @@ body{
         padding: 36px;
         flex: 1;
         margin-bottom: 0;
+        height: 552px;
+    }
+
+    .in-line-mosaic {
+        height: 428px;
+        margin-bottom: 36px;
     }
 
     .in-line-mosaic-width {
@@ -826,7 +847,7 @@ body{
     .in-col-mosaic {
        flex-direction: column;
        justify-content: space-between;
-       height: 445px;
+       height: 100%;
        padding-bottom: unset;
     }
 
