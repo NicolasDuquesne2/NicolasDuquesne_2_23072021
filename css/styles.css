@@ -519,7 +519,11 @@ body{
     }
 
     .margin-right {
-        margin-right: 31px;
+        margin-right: unset;
+    }
+
+    .margin-bottom {
+        margin-bottom: unset;
     }
 
     .order-1 {
@@ -621,17 +625,25 @@ body{
     .in-col-mosaic {
         flex-direction: row;
         flex-wrap: wrap;
-        width: 100%;
-        justify-content: space-between;
         align-content: space-between;
         flex: unset;
-        height: unset;
+        height: 100%;
+        padding-bottom: unset;
+        width: 48%;
     }
     
+    .in-col-mosaic-alt-width {
+        width: unset;
+        height: 296px;
+    }
 
     .in-col-mosaics-frame {
         align-items: flex-start;
         margin: 0 0 0 0
+    }
+
+    .in-line-mosaics-frame-no-margin {
+        height: 830px;
     }
 
     .in-line-card {
@@ -639,16 +651,28 @@ body{
     }
 
     .in-line-mosaic-width {
-        height: unset;
+        height: 49%;
         flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .low-med-card {
+        width: 325px;
+        box-sizing: border-box
+    }
+
+    .low-med-card-pic {
+        width: 100%;
     }
     
     .high-card {
-        height: 390px;
+        height: 100%;
+        box-sizing: border-box;
     }
 
     .high-card-pic {
-        height: 335px;
+        height: 85%;
+        width: 100%;
     }
 
     .main-footer-frame {
@@ -839,7 +863,7 @@ body{
     }
 
     .in-line-mosaic-width {
-        width: 655px;
+        width: 100%;
         flex-direction: row;
         height: unset;
     }
@@ -849,6 +873,7 @@ body{
        justify-content: space-between;
        height: 100%;
        padding-bottom: unset;
+       align-content: flex-end;
     }
 
     .in-col-a {
@@ -946,6 +971,7 @@ body{
         flex-direction: row;
         justify-content: space-between;
         width: 100%;
+        height: unset;
     }
 
 
@@ -962,7 +988,6 @@ body{
 
     .high-card-pic {
         height: 387px;
-        width: 300px;
         border-top-left-radius: 15px;
         border-top-right-radius: 15px;
         object-fit: cover;
@@ -981,7 +1006,6 @@ body{
     .med-card-pic {
         display: flex;
         height: 176px;
-        width: 300px;
         border-top-left-radius: 15px;
         border-top-right-radius: 15px;
         object-fit: cover;
@@ -990,17 +1014,17 @@ body{
     .low-card {
         display: flex;
         flex-direction: column;
-        width: 300px;
         height: 173px;
         border-style: solid;
         border-width: 5px;
         border-color: var(--light-grey);
         border-radius: 20px;
+        width: 300px;
     }
 
     .low-card-pic {
         height: 108px;
-        width: 300px;
+        width: 100%;
         border-top-left-radius: 15px;
         border-top-right-radius: 15px;
         object-fit: cover;
