@@ -863,7 +863,6 @@ body{
     }
 
     .in-line-mosaic-width {
-        width: 100%;
         flex-direction: row;
         height: unset;
     }
