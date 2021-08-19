@@ -41,8 +41,10 @@ body{
 
 .body-header-logo {
     width: 100px;
-    height: 42px;
-    margin: 28px 42% 20px 6%;
+    flex: 2;
+    display: flex;
+    align-items: center;
+    padding-left: 6%;
 }
 
 
@@ -55,10 +57,12 @@ body{
 
 .body-header-nav-2 {
     margin-top: 28px;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     display: flex;
     align-items: center;
     order: 1;
+    flex: 2;
+    justify-content:end;
 }
 
 .body-header-nav-1 > div {
@@ -67,18 +71,20 @@ body{
 
 .body-header-link{
     text-align: center;
+    width: 65%;
 }
 
 .a-nav {
     text-decoration: none;
 }
 
+
 .padding-top-bott {
     padding-top: 10px;
     padding-bottom: 10px;
 }
 
-.a-selected {
+.a-selected:hover {
     border-bottom-color: #0065FC;
     border-bottom-style: solid;
 }
@@ -91,7 +97,9 @@ body{
 }
 
 .section-header {
-    width: 336px;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
 }
 
 .section-header-title {
@@ -271,7 +279,7 @@ body{
     flex-direction: row;
     justify-content:space-between;
     height: 50px;
-    width: 330px;
+    width: 90%;
 }
 
 .fa-chart-line {
@@ -283,36 +291,49 @@ body{
 
 .mosaic-title {
     display: inline-block;
-    width: 336px;
     font-size: 1.4em;
     margin-bottom: 19px;
     margin-top: 0;
 }
 
 .mosaic-footer {
-    width: 336px;
+    width: 90%;
 }
 
 .in-line-mosaic {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    align-content:space-between;
+    flex-wrap: wrap;
+    width: 90%;
     margin-bottom: 20px;
 }
 
 .in-line-mosaic-width {
     display: flex;
     flex-direction: column;
-    align-content: space-between;
+    justify-content: center;
     height: 620px;
+}
+
+.in-line-mosaic-width > a {
+    width: 100%;
+    align-self: center;
 }
 
 .in-col-mosaic {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: center;
+    align-items: center;
     flex: auto;
-    height: 454px;
     padding-bottom: 32px;
+    width: 100%;
+    align-self: center;
+}
+
+.in-col-mosaic-alt-width {
+    width: 90%;
 }
 
 #loc-lodgings {
@@ -328,7 +349,7 @@ body{
 .in-line-card {
     display: flex;
     flex-direction: row;
-    width: 333px;
+    width: 100%;
     height: 133px;
     border-style: none;
     border-width: 5px;
@@ -337,8 +358,12 @@ body{
     box-shadow: 2px 2px 10px  #e9e9e9ff, -2px -2px 7px  #e9e9e9ff;
 }
 
+.in-line-pic-frame {
+    width: 40%;
+}
+
 .in-line-pic {
-    width: 128px;
+    width: 100%;
     height: 133px;
     border-top-left-radius: 15px;
     border-bottom-left-radius: 15px;
@@ -346,7 +371,8 @@ body{
 }
 
 .in-line-card-text {
-    margin-left: 22px;
+    margin-left: 5%;
+    width: 60%;
 }
 
 .in-line-card-title {
@@ -370,8 +396,8 @@ body{
 .in-col-card {
     display: flex;
     flex-direction: column;
-    width: 325px;
-    height: 194px;
+    width: 100%;
+    height: auto;
     border-style: none;
     border-width: 5px;
     border-radius: 20px;
@@ -381,9 +407,9 @@ body{
 }
 
 .in-col-pic {
-    width: 325px;
+    width: 100%;
+    height: 113px ;
     align-self: center;
-    height: 113px;
     border-top-left-radius: 15px;
     border-top-right-radius: 15px;
     object-fit: cover;
@@ -408,6 +434,7 @@ body{
 
 .in-col-a {
     margin-bottom: 10px;
+    width: 100%;
 }
 
 .black-link {
@@ -425,13 +452,15 @@ body{
 .in-line-mosaics-frame-no-margin {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: center;
+    width: 90%;
 }
 
 .low-med-card {
+    box-sizing: border-box;
     display: flex;
     flex-direction: column;
-    width: 332px;
+    width: 100%;
     height: 190px;
     border-style: solid;
     border-width: 5px;
@@ -439,9 +468,12 @@ body{
     border-radius: 20px;
 }
 
+
+
 .low-med-card-pic {
     height: 133px;
-    width: 332px;
+    width: 100%;
+    box-sizing: border-box;
     border-top-left-radius: 15px;
     border-top-right-radius: 15px;
     object-fit: cover;
@@ -463,9 +495,10 @@ body{
 
 .main-footer-frame {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    flex-wrap: wrap;
     justify-content: space-between;
-    width: 332px;
+    width: 60%;
     height: 390px;
     padding-top: 50px;
     padding-bottom: 50px;
@@ -492,10 +525,11 @@ body{
     font-size: 0.9em;
 }
 
+
 @media screen and (min-width: 768px) {
 
     main {
-        width: 691px;
+        width: 90%;
         margin: 0px auto 30px auto;
     }
 
@@ -520,37 +554,41 @@ body{
     }
 
     .body-header{
-        width: 691px;
+        width: 90%;
         flex-direction: row;
         margin: 0px auto 30px auto;
     }
 
     .body-header-logo {
-        flex: 2;
         display: flex;
-        align-items: flex-end;
-        margin: 52px 0 0 0;
+        align-content: center;
+        margin: 0 0 0 0;
+        padding-left: unset;
     }
 
     .body-header-logo > a {
-        margin-top: 52px;
+        margin-top: 40px;
     }
 
     .body-header-nav-1 {
         display: flex;
-        width: 310px;
         flex-direction: row;
         order: 1;
+        width: 235px;
     }
     
     .body-header-nav-2 {
         margin-top: 0;
         margin-bottom: 0;
         order: 2;
-        padding-top: 20px;
+        flex: unset;
+        padding-top: 0;
+        width: 110px;
+        align-items: unset;
+        justify-content: center;
     }
 
-    .a-selected {
+    .a-selected:hover {
         border-bottom: none;
         border-top-color: #0065FC;
         border-top-style: solid;
@@ -562,7 +600,7 @@ body{
     }
 
     .padding-top-bott-2{
-        padding-top: 47px;
+        padding-top: 44px;
     }
 
     .section-header {
@@ -595,12 +633,29 @@ body{
         align-items: flex-start;
         margin-bottom: 0;
         background-color: #ffff;
+        height: 325px;
     }
 
     .in-line-mosaic {
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: space-between;
+        width: 100%;
+        height: 600px;
+    }
+
+    .in-line-a {
+        margin-bottom: unset;
+        width: 48%;
+    }
+
+    .in-col-a {
+        margin-bottom: 0;
+    }
+
+    .in-line-mosaic-width > a {
+        height: 100%;
+        width: 48%;
     }
 
     .mosaic-header {
@@ -611,15 +666,21 @@ body{
         flex-direction: row;
         flex-wrap: wrap;
         align-content: space-between;
+        justify-content: space-between;
         flex: unset;
-        height: 100%;
+        height: 110%;
         padding-bottom: unset;
-        width: 48%;
+        width: 100%;
     }
     
-    .in-col-mosaic-alt-width {
-        width: unset;
-        height: 296px;
+    .in-col-mosaic-2 {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-content: space-between;
+        justify-content: space-between;
+        height: 100%;
+        width: 48%;
     }
 
     .in-col-mosaics-frame {
@@ -629,20 +690,23 @@ body{
 
     .in-line-mosaics-frame-no-margin {
         height: 830px;
+        width: 100%;
+        justify-content: space-between;
     }
 
     .in-line-card {
-        width: 323px;
+        width: 100%;
     }
 
     .in-line-mosaic-width {
         height: 49%;
         flex-direction: row;
         justify-content: space-between;
+        width: 100%;
     }
 
     .low-med-card {
-        width: 325px;
+        width: 100%;
         box-sizing: border-box
     }
 
@@ -653,6 +717,7 @@ body{
     .high-card {
         height: 100%;
         box-sizing: border-box;
+        width: 100%;
     }
 
     .high-card-pic {
@@ -667,24 +732,8 @@ body{
 
 }
 
-@media screen and (min-width: 992px) {
 
-    main {
-        width: 721px;
-    }
-
-    .body-header{
-        width: 721px;
-    }
-
-    .main-footer-frame {
-        width: 721px;
-    }
-
-}
-
-
-@media screen and (min-width: 1378px){
+@media screen and (min-width: 998px){
      
     .to-hide {
         display:inline;
@@ -708,13 +757,19 @@ body{
     }
 
     .body-header{
-        width: 1340px;
+        width: 90%;
+        max-width: 1440px;
         flex-direction: row;
-        margin: 0px auto 0px auto;
+        margin: 0px auto 40px auto;
+    }
+
+    .body-header-nav-2 {
+        margin-right: 20px;
     }
 
     main {
-        width: 1340px;
+        width: 90%;
+        max-width: 1440px;
         margin: 0px auto 0px auto;
     }
 
@@ -755,16 +810,21 @@ body{
         flex-wrap: unset;
         margin-top: 30px;
         margin-bottom: 25px;
+        justify-content:start;
     }
     
     
     .filter-title {
         flex-direction: row;
-        margin-right: 32px;
+        margin-right: 15px;
+    }
+
+    .button-frame {
+        margin-bottom: 0;
     }
 
     .form-filter-button {
-        font-size: 1.3em;
+        font-size: 1.2em;
     }
 
     .info-container
@@ -796,7 +856,7 @@ body{
         flex-direction: row;
         margin-top: 36px;
         margin-bottom: 60px;
-        height: 624px;
+        justify-content: space-between;
     }
 
     .in-col-mosaics-frame {
@@ -827,19 +887,20 @@ body{
         border-radius: 20px;
         display: flex;
         align-items: unset;
-        margin-right: 40px;
         margin-bottom: unset;
-        padding: 42px 38px;
+        margin-right: 3%;
+        padding: 3% 3%;
+        width: 60%;
         flex: auto;
     }
     
     #pop-lodgings {
         background-color: #f2f2f2ff;
         border-radius: 20px;
-        padding: 36px;
-        flex: 1;
+        width: 30%;
+        padding: 2.6% 3%;
         margin-bottom: 0;
-        height: 552px;
+        height: 554px;
     }
 
     .in-line-mosaic {
@@ -850,6 +911,7 @@ body{
     .in-line-mosaic-width {
         flex-direction: row;
         height: unset;
+        width: 48%;
     }
 
     .in-col-mosaic {
@@ -857,16 +919,24 @@ body{
        justify-content: space-between;
        height: 100%;
        padding-bottom: unset;
-       align-content: flex-end;
+       align-content: flex-start;
+    }
+
+    .in-line-a {
+        width: 30%;
+    }
+
+    .in-line-a-2 {
+        width: 100%;
     }
 
     .in-col-a {
-        margin-bottom: 40px;
+        margin-bottom: 0px;
     }
 
     .in-col-card {
         flex-direction: column;
-        width: 235px;
+        width: 100%;
         height: 190px;
         border-style: none;
         border-width: 5px;
@@ -877,7 +947,7 @@ body{
     }
 
     .in-col-pic {
-        width: 236px;
+        width: 100%;
         align-self: center;
         height: 114px;
         border-top-left-radius: 15px;
@@ -915,7 +985,7 @@ body{
 
     .in-line-card {
         flex-direction: row;
-        width: 333px;
+        width: 100%;
         height: 133px;
         border-style: none;
         border-width: 5px;
@@ -925,7 +995,7 @@ body{
     }
 
     .in-line-pic {
-        width: 128px;
+        width: 100%;
         height: 133px;
         border-top-left-radius: 15px;
         border-bottom-left-radius: 15px;
@@ -956,12 +1026,15 @@ body{
         height: unset;
     }
 
+    .in-line-mosaic-width > a {
+        align-self: unset;
+    }
 
     .high-card {
         display: flex;
         flex-direction: column;
-        width: 300px;
-        height: 445px;
+        width: 100%;
+        height: 100%;
         border-style: solid;
         border-width: 5px;
         border-color: #f2f2f2ff;
@@ -977,7 +1050,7 @@ body{
 
     .med-card {
         flex-direction: column;
-        width: 300px;
+        width: 100%;
         height: 244px;
         border-style: solid;
         border-width: 5px;
@@ -1001,7 +1074,7 @@ body{
         border-width: 5px;
         border-color: #f2f2f2ff;
         border-radius: 20px;
-        width: 300px;
+        width: 100%;
     }
 
     .low-card-pic {
@@ -1025,7 +1098,8 @@ body{
     }
 
     .main-footer-frame {
-        width: 1340px;
+        width: 90%;
+        max-width: 1440px;
         flex-direction: row;
         margin: 0px auto 0px auto;
         padding-top: 50px;
